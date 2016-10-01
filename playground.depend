@@ -1,0 +1,79 @@
+# depslib dependency file v1.0
+1473122552 source:/home/justin/src/cpp/playground/main.cpp
+
+1475305781 source:/home/justin/src/cpp/playground/src/main.cpp
+	<glad/glad.h>
+	<GLFW/glfw3.h>
+	"engine/engine.h"
+
+1473130828 source:/home/justin/src/cpp/playground/vendor/glad/glad.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<glad/glad.h>
+
+1473130866 /home/justin/src/cpp/playground/vendor/glad/glad.h
+	<windows.h>
+	<stddef.h>
+	<KHR/khrplatform.h>
+	<inttypes.h>
+	<inttypes.h>
+	<inttypes.h>
+	<stdint.h>
+	<stdint.h>
+	<inttypes.h>
+
+1473130918 /home/justin/src/cpp/playground/vendor/KHR/khrplatform.h
+	<sys/cdefs.h>
+	<stdint.h>
+	<inttypes.h>
+	<stdint.h>
+
+1473131765 /home/justin/src/cpp/playground/vendor/GLFW/glfw3.h
+	<stddef.h>
+	<stdint.h>
+	<OpenGL/gl3.h>
+	<OpenGL/gl3ext.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/glcorearb.h>
+	<GLES/gl.h>
+	<GLES/glext.h>
+	<GLES2/gl2.h>
+	<GLES2/gl2ext.h>
+	<GLES3/gl3.h>
+	<GLES2/gl2ext.h>
+	<GLES3/gl31.h>
+	<GLES2/gl2ext.h>
+	<vulkan/vulkan.h>
+	<GL/gl.h>
+	<GL/glext.h>
+	<GL/glu.h>
+
+1475268702 source:/home/justin/src/cpp/playground/src/engine/input.cpp
+	<glad/glad.h>
+	"input.h"
+
+1475305634 /home/justin/src/cpp/playground/src/engine/input.h
+	<stdint.h>
+	<bitset>
+	<glm/glm.hpp>
+	<string>
+	<vector>
+	<GLFW/glfw3.h>
+
+1475304275 source:/home/justin/src/cpp/playground/src/engine/engine.cpp
+	"engine.h"
+	<iostream>
+	<glad/glad.h>
+	<GLFW/glfw3.h>
+
+1475305729 /home/justin/src/cpp/playground/src/engine/engine.h
+	"common.h"
+	<glad/glad.h>
+	<GLFW/glfw3.h>
+	"input.h"
+
+1473217175 /home/justin/src/cpp/playground/src/engine/common.h
+	<string>
+

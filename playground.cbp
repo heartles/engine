@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="playground" />
+		<Option pch_mode="2" />
+		<Option compiler="clang" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/playground" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="clang" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-std=c++1z" />
+					<Add directory="/home/justin/src/cpp/playground/vendor" />
+				</Compiler>
+				<Linker>
+					<Add library="glfw" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/playground" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="clang" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++1z" />
+		</Compiler>
+		<Unit filename="src/engine/common.h" />
+		<Unit filename="src/engine/content/shader.h" />
+		<Unit filename="src/engine/engine.cpp" />
+		<Unit filename="src/engine/engine.h" />
+		<Unit filename="src/engine/graphics/vertexbuffer.h" />
+		<Unit filename="src/engine/input.cpp" />
+		<Unit filename="src/engine/input.h" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="vendor/KHR/khrplatform.h" />
+		<Unit filename="vendor/glad/glad.cpp" />
+		<Unit filename="vendor/glad/glad.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
