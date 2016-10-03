@@ -41,7 +41,6 @@
 		<Unit filename="src/engine/content/shader.h" />
 		<Unit filename="src/engine/engine.cpp" />
 		<Unit filename="src/engine/engine.h" />
-		<Unit filename="src/engine/graphics/vertexbuffer.h" />
 		<Unit filename="src/engine/input.cpp" />
 		<Unit filename="src/engine/input.h" />
 		<Unit filename="src/main.cpp" />

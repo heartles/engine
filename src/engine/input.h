@@ -1,9 +1,9 @@
 #include <stdint.h>
 #include <bitset>
 #include <glm/glm.hpp>
-#include <string>
 #include <vector>
 #include <GLFW/glfw3.h>
+#include "common.h"
 
 class Button
 {
@@ -17,7 +17,7 @@ public:
     static constexpr index_t Shift = 9; //TODO: fix value and add other constants
 
     Button(const char c);
-    Button(std::string name);
+    Button(String name);
     Button(index_t i);
 };
 
@@ -34,7 +34,7 @@ public:
     static constexpr index_t MouseY = 1;
     //TODO: add other constants
 
-    Axis(std::string name);
+    Axis(String name);
 };
 
 struct Input
