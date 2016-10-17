@@ -1,7 +1,9 @@
 #include "common.h"
+#include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include "input.h"
+#include "graphics/vertex_array.h"
 
 struct Logging
 {
@@ -18,7 +20,29 @@ class Engine
     Game_t _game;
 
 public:
-    Engine() : _game(*this) {}
+    Engine()
+        : _game (*this)
+    {
+        glfwInit();
+
+        auto monitor = glfwGetPrimaryMonitor();
+        auto mode = glfwGetVideoMode(monitor);
+        glfwWindowHint(GLFW_RED_BITS, mode->redBits);
+        glfwWindowHint(GLFW_GREEN_BITS, mode->greenBits);
+        glfwWindowHint(GLFW_BLUE_BITS, mode->blueBits);
+        glfwWindowHint(GLFW_REFRESH_RATE, mode->refreshRate);
+
+        glfwWindowHint(GLFW_RESIZABLE, false);
+
+        _window = glfwCreateWindow(mode->width, mode->height, "cpp playground", nullptr, nullptr);
+
+        glfwMakeContextCurrent(_window);
+        gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+
+        glfwSetErrorCallback([](int code, const char *text) {
+            std::cout << text << std::endl;
+        });
+    }
 
     InputManager & InputManager() {return _inputManager;}
     void Init();
@@ -30,20 +54,6 @@ template <typename Game_t>
 void
 Engine<Game_t>::Init()
 {
-    glfwInit();
-    auto monitor = glfwGetPrimaryMonitor();
-    auto mode = glfwGetVideoMode(monitor);
-    glfwWindowHint(GLFW_RED_BITS, mode->redBits);
-    glfwWindowHint(GLFW_GREEN_BITS, mode->greenBits);
-    glfwWindowHint(GLFW_BLUE_BITS, mode->blueBits);
-    glfwWindowHint(GLFW_REFRESH_RATE, mode->refreshRate);
-
-    glfwWindowHint(GLFW_RESIZABLE, false);
-
-    _window = glfwCreateWindow(mode->width, mode->height, "cpp playground", nullptr, nullptr);
-
-    glfwMakeContextCurrent(_window);
-    gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 
     _game.Init();
 }
@@ -59,5 +69,7 @@ Engine<Game_t>::Run()
         _inputManager.Update(_window);
 
         _game.Frame();
+
+        glfwSwapBuffers(_window);
     }
 }

@@ -15,6 +15,7 @@
 					<Add option="-g" />
 					<Add option="-std=c++1z" />
 					<Add directory="/home/justin/src/cpp/playground/vendor" />
+					<Add directory="alt-vendor/gsl/gsl" />
 				</Compiler>
 				<Linker>
 					<Add library="glfw" />
@@ -37,10 +38,19 @@
 			<Add option="-Wall" />
 			<Add option="-std=c++1z" />
 		</Compiler>
+		<Unit filename="alt-vendor/gsl/gsl/gsl" />
+		<Unit filename="alt-vendor/gsl/gsl/gsl_assert" />
+		<Unit filename="alt-vendor/gsl/gsl/gsl_byte" />
+		<Unit filename="alt-vendor/gsl/gsl/gsl_util" />
+		<Unit filename="alt-vendor/gsl/gsl/multi_span" />
+		<Unit filename="alt-vendor/gsl/gsl/span" />
+		<Unit filename="alt-vendor/gsl/gsl/string_span" />
 		<Unit filename="src/engine/common.h" />
 		<Unit filename="src/engine/content/shader.h" />
 		<Unit filename="src/engine/engine.cpp" />
 		<Unit filename="src/engine/engine.h" />
+		<Unit filename="src/engine/graphics/vertex_array.cpp" />
+		<Unit filename="src/engine/graphics/vertex_array.h" />
 		<Unit filename="src/engine/input.cpp" />
 		<Unit filename="src/engine/input.h" />
 		<Unit filename="src/main.cpp" />

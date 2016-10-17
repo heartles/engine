@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
 1473122552 source:/home/justin/src/cpp/playground/main.cpp
 
-1475305781 source:/home/justin/src/cpp/playground/src/main.cpp
+1476736478 source:/home/justin/src/cpp/playground/src/main.cpp
 	<glad/glad.h>
 	<GLFW/glfw3.h>
 	"engine/engine.h"
 
-1473130828 source:/home/justin/src/cpp/playground/vendor/glad/glad.cpp
+1475474910 source:/home/justin/src/cpp/playground/vendor/glad/glad.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -68,12 +68,48 @@
 	<glad/glad.h>
 	<GLFW/glfw3.h>
 
-1475305729 /home/justin/src/cpp/playground/src/engine/engine.h
+1476723354 /home/justin/src/cpp/playground/src/engine/engine.h
 	"common.h"
+	<iostream>
 	<glad/glad.h>
 	<GLFW/glfw3.h>
 	"input.h"
+	"graphics/vertex_array.h"
 
-1473217175 /home/justin/src/cpp/playground/src/engine/common.h
+1475481365 /home/justin/src/cpp/playground/src/engine/common.h
 	<string>
+	<vector>
+
+1476736866 source:/home/justin/src/cpp/playground/src/engine/graphics/vertex_array.cpp
+	"vertex_array.h"
+
+1476431652 /home/justin/src/cpp/playground/src/engine/graphics/vertex_array.h
+	<vector>
+	"../common.h"
+	<glad/glad.h>
+	<span>
+
+1475477585 /home/justin/src/cpp/playground/alt-vendor/gsl/gsl/span
+	"gsl_assert"
+	"gsl_byte"
+	"gsl_util"
+	<array>
+	<iterator>
+	<limits>
+	<stdexcept>
+	<type_traits>
+	<utility>
+
+1475477585 /home/justin/src/cpp/playground/alt-vendor/gsl/gsl/gsl_assert
+	<exception>
+	<stdexcept>
+
+1475477585 /home/justin/src/cpp/playground/alt-vendor/gsl/gsl/gsl_byte
+
+1475477585 /home/justin/src/cpp/playground/alt-vendor/gsl/gsl/gsl_util
+	"gsl_assert"
+	<array>
+	<exception>
+	<type_traits>
+	<utility>
 
